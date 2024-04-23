@@ -6,5 +6,9 @@ let diametro = 3.5;
 let altura = 1.6;
 let volume;
 
+document.write("Diâmetro " + diametro + "<br>")
+document.write("Altura " + altura + "<hr>")
+
+
 volume = Math.PI * (diametro * diametro) * altura;
 document.write("O volume da piscina é " + volume)
