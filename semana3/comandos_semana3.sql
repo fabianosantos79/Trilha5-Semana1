@@ -24,7 +24,7 @@ INSERT INTO brh.papel (
     nome
 ) VALUES (
     8,
-    'Especialista de Negócios'
+    'Especialista de Negï¿½cios'
 );
 
 INSERT INTO brh.telefone_colaborador (
@@ -101,7 +101,7 @@ INSERT INTO brh.dependente (
     '367.419.374-22',
     'A124',
     'Cicrana de Tal',
-    'Cônjuge',
+    'Cï¿½njuge',
     TO_DATE('1987-10-13', 'yyyy-mm-dd')
 );
 
@@ -131,7 +131,7 @@ INSERT INTO brh.atribuicao (
 
 
 
--- RELATÓRIO DE CÔNJUGES
+-- RELATï¿½RIO DE Cï¿½NJUGES
 SELECT
     colab.nome AS nome_colaborador,
     depen.nome AS nome_conjuge,
@@ -140,11 +140,11 @@ FROM
          brh.colaborador colab
     INNER JOIN brh.dependente depen ON colab.matricula = depen.colaborador
 WHERE
-    depen.parentesco = 'Cônjuge';
+    depen.parentesco = 'Cï¿½njuge';
 
 
 
--- RELATÓRIO DE CONTATOS TELEFÔNICOS
+-- RELATï¿½RIO DE CONTATOS TELEFï¿½NICOS
 SELECT
     colab.nome,
     fone.numero,
@@ -162,7 +162,7 @@ WHERE
 
 
 
--- COLABORADOR COM SALÁRIO MAIS ALTO
+-- COLABORADOR COM SALï¿½RIO MAIS ALTO
 SELECT
     nome,
     salario
@@ -178,7 +178,7 @@ WHERE
 
 
 
--- RELATÓRIO DE SENIORIDADE
+-- RELATï¿½RIO DE SENIORIDADE
 SELECT
     matricula,
     nome,
@@ -186,13 +186,13 @@ SELECT
     (
         CASE
             WHEN salario <= 3000 THEN
-                'Júnior'
+                'Jï¿½nior'
             WHEN salario > 3000
                  AND salario <= 6000 THEN
                 'Pleno'
             WHEN salario > 6000
                  AND salario <= 20000 THEN
-                'Sênior'
+                'Sï¿½nior'
             ELSE
                 'Corpo Diretor'
         END
@@ -222,7 +222,7 @@ ORDER BY
     
     
     
--- RELATÓRIO DE DEPENDENTES MENORES DE IDADE
+-- RELATï¿½RIO DE DEPENDENTES MENORES DE IDADE
 SELECT
     colab.matricula AS matricula_colaborador,
     depen.nome AS nome_dependente,
@@ -235,7 +235,7 @@ WHERE
 
 
 
--- RELATÓRIO ANALÍTICO DE EQUIPES
+-- RELATï¿½RIO ANALï¿½TICO DE EQUIPES
 SELECT
     depto.nome  AS nome_departamento,
     depto.chefe,
