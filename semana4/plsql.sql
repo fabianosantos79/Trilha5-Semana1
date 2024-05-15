@@ -1,4 +1,4 @@
---Criar procedure Insere_projeto
+-- Criar procedure Insere_projeto
 CREATE OR REPLACE PROCEDURE brh.insere_projeto(
 p_ID IN INTEGER,
 p_NOME_DO_PROJETO IN VARCHAR2, 
@@ -13,7 +13,7 @@ END;
 
 
 
---Criar funcao calcula_idade
+-- Criar funcao calcula_idade
 VARIABLE g_IDADE INTEGER(3);
 CREATE OR REPLACE FUNCTION calcula_idade
     (p_DATA IN DATE)
@@ -27,7 +27,7 @@ END;
 
 
 
---Criar funcao finaliza_projeto
+-- Criar funcao finaliza_projeto
 CREATE OR REPLACE FUNCTION finaliza_projeto(
     p_ID IN BRH.PROJETO.ID%type,
     p_DATA_FINALIZACAO IN BRH.PROJETO.FIM%type
@@ -41,7 +41,7 @@ END;
 
 
 
---Validar novo projeto
+-- Validar novo projeto
 CREATE OR REPLACE PROCEDURE brh.insere_projeto(
 p_ID IN INTEGER,
 p_NOME_DO_PROJETO IN VARCHAR2, 
@@ -60,7 +60,7 @@ END;
 
 
 
---Validar calculo de idade
+-- Validar calculo de idade
 VARIABLE g_IDADE INTEGER(3);
 CREATE OR REPLACE FUNCTION calcula_idade
     (p_DATA IN DATE)
@@ -75,10 +75,3 @@ BEGIN
       dbms_output.put_line('Imposs�vel calcular idade! Data inv�lida: ' || g_idade);
     END IF;  
 END;
-
-
-
---Criar procedure define_atribuicao
-CREATE OR REPLACE PROCEDURE brh.define_atribuicao(
-
-)
